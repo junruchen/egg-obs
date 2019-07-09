@@ -1,6 +1,6 @@
 {
   "name": "egg-obs",
-  "version": "0.0.1-beta.0.0.4",
+  "version": "0.0.1",
   "description": "华为云 OBS",
   "eggPlugin": {
     "name": "obs"
@@ -8,7 +8,8 @@
   "keywords": [
     "egg",
     "eggPlugin",
-    "egg-plugin"
+    "egg-plugin",
+    "obs"
   ],
   "dependencies": {
     "esdk-obs-nodejs": "^3.1.3"
@@ -47,12 +48,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eggjs/egg-obs.git"
+    "url": "git+https://github.com/junruchen/egg-obs.git"
   },
   "bugs": {
     "url": "https://github.com/eggjs/egg/issues"
   },
-  "homepage": "https://github.com/eggjs/egg-obs#readme",
-  "author": "junru",
+  "homepage": "https://github.com/junruchen/egg-obs#readme",
+  "author": "JunruChen",
   "license": "MIT"
 }
