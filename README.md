@@ -108,6 +108,9 @@ module.exports = class extends Controller {
 ```
 
 ## Questions & Suggestions
+If upload blob file, `ctx.getFileStream()` will   prompt `[Invalid filename: blob]` error.
+
+Use `config.multipart = { fileExtensions: [''] }` to fix it.
 
 Please open an issue [here](https://github.com/eggjs/egg/issues).
 
