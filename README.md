@@ -51,10 +51,15 @@ see [config/config.default.js](config/config.default.js) for more detail.
 
 ## Usage
 
-- putObject({ key, imageProcess })
-- getObject({ key, body })
-- delObject({ key })
-- setBucket(name)
+#### putObject({ key, imageProcess })
+#### getObject(options)
+options参数说明：
+- Key
+- ImageProcess
+- SaveAsStream
+
+#### delObject({ key })
+#### setBucket(name)
 
 You can require obs instance on app or ctx.
 
@@ -86,7 +91,7 @@ module.exports = class extends Controller {
     const { ctx } = this
     const objectname = ctx.params.objectname;
     try {
-      const result = await ctx.obs.getObject({ key: objectname })
+      const result = await ctx.obs.getObject({ Key: objectname })
       if (result.CommonMsg.Status < 300 && result.InterfaceResult) {
         // 读取对象内容
         const { ContentLength, Date, ETag, ContentType, Content } = result.InterfaceResult
